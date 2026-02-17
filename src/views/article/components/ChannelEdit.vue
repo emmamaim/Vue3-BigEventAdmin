@@ -5,7 +5,7 @@ import { ref } from 'vue'
 // 彈窗
 const dialogVisible = ref(false)
 // 子傳父 emit
-const emit = defineEmits(['sucess'])
+const emit = defineEmits(['success'])
 // 綁定數據
 const formModel = ref({
   cate_name: '',
@@ -61,7 +61,6 @@ const onSubmit = async () => {
 
 // 組件提供方法open
 const open = (row) => {
-  console.log(row)
   dialogVisible.value = true
   formModel.value = { ...row }
 }
@@ -71,8 +70,17 @@ defineExpose({
 })
 </script>
 <template>
-  <el-dialog v-model="dialogVisible" :title="formModel.id ? '編輯分類' : '添加分類'" width="30%">
-    <el-form :model="formModel" :rules="rules" label-width="100px" ref="formRef">
+  <el-dialog
+    v-model="dialogVisible"
+    :title="formModel.id ? '編輯分類' : '添加分類'"
+    width="30%"
+  >
+    <el-form
+      :model="formModel"
+      :rules="rules"
+      label-width="100px"
+      ref="formRef"
+    >
       <el-form-item label="分類名稱" prop="cate_name">
         <el-input v-model="formModel.cate_name" placeholder="請輸入分類名稱" />
       </el-form-item>

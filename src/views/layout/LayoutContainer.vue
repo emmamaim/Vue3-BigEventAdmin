@@ -96,10 +96,18 @@ const handleCommand = async (key) => {
           </span>
           <template #dropdown>
             <el-dropdown-menu>
-              <el-dropdown-item command="profile" :icon="User"> 基本資料 </el-dropdown-item>
-              <el-dropdown-item command="avatar" :icon="Crop"> 更換頭像 </el-dropdown-item>
-              <el-dropdown-item command="password" :icon="EditPen"> 重置密碼 </el-dropdown-item>
-              <el-dropdown-item command="logout" :icon="SwitchButton"> 退出登入 </el-dropdown-item>
+              <el-dropdown-item command="profile" :icon="User">
+                基本資料
+              </el-dropdown-item>
+              <el-dropdown-item command="avatar" :icon="Crop">
+                更換頭像
+              </el-dropdown-item>
+              <el-dropdown-item command="password" :icon="EditPen">
+                重置密碼
+              </el-dropdown-item>
+              <el-dropdown-item command="logout" :icon="SwitchButton">
+                退出登入
+              </el-dropdown-item>
             </el-dropdown-menu>
           </template>
         </el-dropdown>

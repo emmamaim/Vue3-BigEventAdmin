@@ -37,7 +37,7 @@ const onAddChannel = () => {
   dialog.value.open({})
 }
 // 監聽子組件的sucess
-const onSucess = () => {
+const onSuccess = () => {
   getChannelList()
 }
 </script>
@@ -71,7 +71,7 @@ const onSucess = () => {
         <el-empty description="沒有數據"></el-empty>
       </template>
     </el-table>
-    <channel-edit ref="dialog" @sucess="onSucess"></channel-edit>
+    <channel-edit ref="dialog" @sucess="onSuccess"></channel-edit>
   </page-container>
 </template>
 
