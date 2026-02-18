@@ -6,7 +6,7 @@
   "scripts": {
     "dev": "vite",
     "build": "vite build",
-    "deploy": "gh-pages -d dist",
+    "deploy": "pnpm run build && node -e \"require('fs').writeFileSync('dist/.nojekyll','')\" && gh-pages -d dist --dotfiles",
     "preview": "vite preview",
     "format": "prettier --write --experimental-cli src/",
     "prepare": "husky install",

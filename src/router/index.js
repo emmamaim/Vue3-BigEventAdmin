@@ -1,10 +1,10 @@
 import { useUserStore } from '@/stores'
-import { createRouter, createWebHistory } from 'vue-router'
+import { createRouter, createWebHashHistory } from 'vue-router'
 
 // 創建路由實例
 // createWebHashHistory / createWebHistory
 const router = createRouter({
-  history: createWebHistory(import.meta.env.BASE_URL),
+  history: createWebHashHistory(import.meta.env.BASE_URL),
   routes: [
     { path: '/login', component: () => import('@/views/login/loginPage.vue') },
     {
